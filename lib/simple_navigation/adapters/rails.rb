@@ -35,7 +35,7 @@ module SimpleNavigation
       end
       
       def current_page?(url)
-        template.current_page?(url) if template
+        template.current_page?(url.downcase) if template
       end
       
       def link_to(name, url, options={})
